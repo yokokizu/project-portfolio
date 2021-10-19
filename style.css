@@ -1,16 +1,101 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Source+Code+Pro:wght@300&display=swap');
+* {
+  box-sizing: border-box;
+}
 html{
   scroll-behavior: smooth;
+  height: 100%;
+}
+:root{
+  --body-bg: #fefefe;
+  --body-txt: #444;
+  --header-bg: #555;
+  --header-txt: #fff;
+  --footer-bg: var(--header-bg);
+  --footer-txt: var(--header-txt);
+  --section-one-bg: var(--body-bg);
+  --section-one-txt: var(--body-txt);
+  --section-two-bg: #efefef;
+  --section-two-txt: var(--body-txt);
 }
 body {
-  background: #333;
-  color: #fff;
+  background: var(--body-bg);
+  color: var(--body-txt);
   font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-  line-height: 1.5;
+  font-size: 20px;
+  line-height: 1.8;
+  letter-spacing: 0.1rem;
+  display:flex;
+  flex-direction: column;
+  height: 100%;
 }
 h1, h2, h3 {
   font-family: 'Source Code Pro', monospace;
   font-weight: 300;
-  font-size: 2rem;
+  font-size: 3rem;
+  padding-bottom:1rem
+}
+h1, h2, h3, p{
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+header, footer{
+  background: var(--header-bg);
+  color:  var(--header-txt);
+}
+header .container{
+  padding-left:0;
+  padding-right:0;
+}
+nav ul{
+  display:flex;
+  justify-content: end;
+}
+nav li{
+  padding:0 1rem;
+}
+nav a{
+  color:  var(--header-txt);
+  text-decoration: none;
+}
+nav a:hover{
+  text-decoration: underline;
+}
+main{
+  flex: 1 0 auto;
+}
+section{
+  background-color: var(--section-one-bg);
+  color: var(--section-one-txt);
+}
+section:nth-child(2n+1){
+  background-color: var(--section-two-bg);
+  color: var(--section-two-txt);
+}
+.container{
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;  
+}
+
+#about .container{
+  height: calc(100vh - 91px);
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+#about article{
+  margin: 0 auto;
+}
+
+
+
+
+
+
+footer{
+  margin-top: auto;
+  text-align: right;
+  flex-shrink: 0;
 }
