@@ -130,10 +130,20 @@ section:nth-child(2n+1){
   fill:red;
   cursor: pointer;
 }
+#play h3{
+  transition: color 1s;
+}
+#play h3:hover{
+  cursor: pointer;
+  color:red;
+}
 #play .games{
   padding-top: var(--padding-topdown)
 }
-
+.game{
+  padding-bottom: var(--padding-topdown);
+  display:none
+}
 #contact a{
   font-weight: bold;
   color:blue
