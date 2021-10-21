@@ -13,6 +13,8 @@ html{
   --header-txt: #fff;
   --footer-bg: var(--header-bg);
   --footer-txt: var(--header-txt);
+  --link: blue;
+  --linkHover: rgb(6, 180, 6);
   --section-one-bg: var(--body-bg);
   --section-one-txt: var(--body-txt);
   --section-two-bg: #efefef;
@@ -31,6 +33,7 @@ body {
   display:flex;
   flex-direction: column;
   height: 100%;
+  text-align:center
 }
 h1, h2, h3 {
   font-family: 'Source Code Pro', monospace;
@@ -44,15 +47,23 @@ h3{
 h1, h2, h3, p{
   max-width:  var(--box);
   margin: 0 auto;
-  text-align: center;
+}
+button{
+  padding: 1rem 2rem;
+  background-color: var(--link);
+  transition: background-color 1s;
+  font-size:1.2em;
+  color:white;
+  margin-top: 2rem;
+  border:none;
+  border-radius: 0.5rem;
+}
+button:hover, button:active{
+  background: var(--linkHover);
 }
 header, footer{
   background: var(--header-bg);
   color: var(--header-txt);
-}
-header{
-  position:fixed;
-  width:100%;
 }
 header .container{
   padding-left:0;
@@ -75,7 +86,7 @@ nav a{
   transition: color 1s;
 }
 nav a:hover{
-  color:red;
+  color: var(--linkHover);
 }
 main{
   flex: 1 0 auto;
@@ -127,7 +138,7 @@ section:nth-child(2n+1){
 }
 
 #skills svg:hover{
-  fill:red;
+  fill:var(--linkHover);
   cursor: pointer;
 }
 #play h3{
@@ -135,21 +146,41 @@ section:nth-child(2n+1){
 }
 #play h3:hover{
   cursor: pointer;
-  color:red;
+  color:var(--linkHover);
 }
 #play .games{
   padding-top: var(--padding-topdown)
 }
 .game{
-  padding-bottom: var(--padding-topdown);
-  display:none
+  display:none;
+  max-width: var(--box);
+  margin:0 auto var(--padding-topdown) auto;
+  padding: var(--padding-topdown) var(--padding-side);
+  background:var(--section-two-bg);
+}
+#luckyColor h4{
+  padding-bottom: 1rem;  
+}
+#theLuckyColor{
+  font-size: 2rem;
+  color: white;
+  background-color:red;
+  padding: 0.5rem 1rem;
+  line-height: 2;
+  font-family: 'Source Code Pro', monospace;
+  font-weight:700;
+  text-transform: uppercase;
+}
+#colorList{
+  font-family: 'Source Code Pro', monospace;
+  text-transform: capitalize;
 }
 #contact a{
   font-weight: bold;
-  color:blue
+  color: var(--link);
 }
 #contact a:hover{
-  color:red
+  color: var(--linkHover);
 }
 footer{
   margin-top: auto;
