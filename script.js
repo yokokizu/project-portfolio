@@ -12,7 +12,7 @@ for (let i = 0; i < showGameBtn.length; i++){
     })
 }
 
-
+//ffff
 
 // Lucky Color Game
 const colors = ['Red', 'Blue', 'Yellow', 'Pink', 'White', 'Block', 'Green', 'Brown']
