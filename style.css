@@ -132,14 +132,15 @@ section:nth-child(2n+1){
   margin:0 auto;
   display:flex;
   justify-content: center;
+  flex-wrap:wrap
 }
 #skills svg{
   width:auto;
   height:50px;
   transition: fill 1s, transform 1s;
   fill: black;
-  padding-right: var(--padding-side);
-  
+  margin-right: var(--padding-side);
+  margin-bottom: var(--padding-topdown)
 }
 
 #skills svg:hover{
@@ -186,6 +187,19 @@ section:nth-child(2n+1){
   font-family: 'Source Code Pro', monospace;
   text-transform: capitalize;
 }
+.twoCols{
+  display: flex;
+  justify-content: center;
+}
+.twoCols>div{
+  margin:10px;
+  background: white;
+  padding: var(--padding-side);
+}
+#dice svg{
+  width:80px;
+}
+
 #contact a{
   font-weight: bold;
   color: var(--link);
