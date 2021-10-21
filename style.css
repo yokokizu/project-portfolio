@@ -22,6 +22,7 @@ html{
   --padding-side: 2rem;
   --padding-topdown: 3rem; 
   --box: 800px;
+  --upsideDown: rotateX(180deg);
 }
 body {
   background: var(--body-bg);
@@ -83,11 +84,14 @@ nav li:first-child{
 nav a{
   color:  var(--header-txt);
   text-decoration: none;
-  transition: color 1s;
+  transition: color 1s, transform 1s;
 }
 nav a:hover{
   color: var(--linkHover);
+  display: flex;
+  transform: var(--upsideDown);
 }
+
 main{
   flex: 1 0 auto;
 }
@@ -132,21 +136,26 @@ section:nth-child(2n+1){
 #skills svg{
   width:auto;
   height:50px;
-  transition: fill 1s;
+  transition: fill 1s, transform 1s;
   fill: black;
-  padding-right: var(--padding-side)
+  padding-right: var(--padding-side);
+  
 }
 
 #skills svg:hover{
   fill:var(--linkHover);
   cursor: pointer;
+  transform: var(--upsideDown);
 }
 #play h3{
-  transition: color 1s;
+  transition: color 1s, scaleX 2s;
 }
 #play h3:hover{
   cursor: pointer;
   color:var(--linkHover);
+  display: flex;
+  justify-content: center;
+  transform: scaleX(-1);
 }
 #play .games{
   padding-top: var(--padding-topdown)
@@ -159,7 +168,9 @@ section:nth-child(2n+1){
   background:var(--section-two-bg);
 }
 #luckyColor h4{
-  padding-bottom: 1rem;  
+  padding-bottom: 1rem; 
+  font-weight:900; 
+
 }
 #theLuckyColor{
   font-size: 2rem;
@@ -186,6 +197,10 @@ footer{
   margin-top: auto;
   text-align: right;
   flex-shrink: 0;
+}
+footer nav{
+  width: auto;
+  display: inline-block;
 }
 @media only screen and (max-width: 600px) {
   :root{
