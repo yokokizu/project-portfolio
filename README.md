@@ -1,2 +1,2 @@
 # Project Portfolio
-This is a project in Codecademy Frontend.
+This is a project in Codecademy Frontend...
