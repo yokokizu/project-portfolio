@@ -77,7 +77,7 @@ const diceGame = (diceArray, yourDiceShow, myDiceShow) => {
         diceResult.innerHTML = 'Tie!';
         yourDiceShow.style.fill = 'yellow';
         myDiceShow.style.fill = 'yellow';
-    } else if (yourDiceO.svg > myDiceO.svg) {
+    } else if (yourDiceO.svg < myDiceO.svg) {
         diceResult.innerHTML = 'You won!';
         yourDiceShow.style.fill = 'red';
         myDiceShow.style.fill = 'blue';
